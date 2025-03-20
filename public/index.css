@@ -1,0 +1,247 @@
+/* Styles pour la page catalogue des burgers */
+/* Section héro */
+.hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url('/img/burger-pattern.png');
+    background-size: cover;
+    padding: 5rem 1rem;
+    margin-bottom: 3rem;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.hero-section h1 {
+    color: #FF8BA7;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+}
+
+.hero-section p {
+    color: #594A4E;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+}
+
+.hero-section .btn-primary {
+    background-color: #FF8BA7;
+    border-color: #FF8BA7;
+    color: white;
+    border-radius: 30px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #9D8189;
+    border-color: #9D8189;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Container principal */
+.container h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #9D8189;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.container h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #FF8BA7;
+    border-radius: 3px;
+}
+
+/* Boutons */
+.btn {
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #FF8BA7;
+    border-color: #FF8BA7;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #9D8189;
+    border-color: #9D8189;
+}
+
+.btn-info {
+    background-color: #A8D0E6;
+    border-color: #A8D0E6;
+    color: #594A4E;
+}
+
+.btn-info:hover {
+    background-color: #8DC0D8;
+    border-color: #8DC0D8;
+}
+
+.btn-warning {
+    background-color: #F8E9A1;
+    border-color: #F8E9A1;
+    color: #594A4E;
+}
+
+.btn-warning:hover {
+    background-color: #EDD985;
+    border-color: #EDD985;
+}
+
+.btn-danger {
+    background-color: #F4ACAC;
+    border-color: #F4ACAC;
+    color: #594A4E;
+}
+
+.btn-danger:hover {
+    background-color: #E89A9A;
+    border-color: #E89A9A;
+}
+
+/* Formulaire de filtres */
+form.mb-4 {
+    background-color: #FFF5F5;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.03);
+}
+
+.form-control {
+    border-radius: 20px;
+    border: 1px solid #E0E0E0;
+    padding: 0.75rem 1.25rem;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 139, 167, 0.25);
+    border-color: #FF8BA7;
+}
+
+/* Cards des burgers */
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: none;
+    height: 100%;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: #9D8189;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #594A4E;
+    margin-bottom: 0.75rem;
+}
+
+.card-text strong {
+    color: #FF8BA7;
+}
+
+/* Message empty */
+.alert-info {
+    background-color: #A8D0E6;
+    border-color: #8DC0D8;
+    color: #594A4E;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.alert-info i {
+    color: #FF8BA7;
+    margin-bottom: 1rem;
+}
+
+.alert-info h4 {
+    color: #9D8189;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 2rem;
+}
+
+.pagination .page-item .page-link {
+    border-radius: 50%;
+    margin: 0 5px;
+    color: #9D8189;
+    border-color: #E0E0E0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #FF8BA7;
+    border-color: #FF8BA7;
+    color: white;
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #FAF3DD;
+    color: #FF8BA7;
+    transform: scale(1.1);
+}

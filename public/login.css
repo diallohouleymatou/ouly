@@ -1,0 +1,139 @@
+/* Style féminin pour la page de connexion de site de vente de burgers */
+
+body {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/placeholder-images/0.3.0/placeholder.png'); /* Remplacez par votre image de fond */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    color: #4a4a4a;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 192, 203, 0.4); /* Fond rose transparent */
+    z-index: -1;
+}
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #ff85a2;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px;
+    border-bottom: none;
+}
+
+.card-body {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #f5c6d6;
+    background-color: #fff9fa;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ff85a2;
+    box-shadow: 0 0 8px rgba(255, 133, 162, 0.5);
+}
+
+.col-form-label {
+    font-weight: 500;
+    color: #724c58;
+}
+
+.btn-primary {
+    background-color: #ff6b8b;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e64b6c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 75, 108, 0.3);
+}
+
+.btn-link {
+    color: #ff6b8b;
+    font-weight: 500;
+}
+
+.btn-link:hover {
+    color: #e64b6c;
+    text-decoration: none;
+}
+
+.form-check-input:checked {
+    background-color: #ff6b8b;
+    border-color: #ff6b8b;
+}
+
+.invalid-feedback {
+    color: #e64b6c;
+}
+
+/* Animation douce au chargement */
+.card {
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Personnalisation supplémentaire pour thème burger */
+.card-header::after {
+    content: "🍔";
+    margin-left: 10px;
+}
+
+.btn-primary::after {
+    content: "🍟";
+    margin-left: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding-top: 20px;
+    }
+
+    .card-header {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,63 @@
+stages:
+  - setup
+  - install
+  - build
+  - test
+
+variables:
+  PHP_VERSION: "8.3"
+  NODE_VERSION: "22"
+
+before_script:
+  - apt-get update -y
+  - apt-get install -y unzip libpng-dev libjpeg-dev libfreetype6-dev zip git curl
+  # Installer l'extension GD pour PHP
+  - docker-php-ext-install gd
+
+# Setup PHP avec une image officielle PHP
+setup_php:
+  image: "php:8.3-cli"  # Utilisation de l'image officielle PHP
+  stage: setup
+  script:
+    - curl -sSL https://getcomposer.org/installer | php
+    - mv composer.phar /usr/local/bin/composer
+    - echo "Using PHP $PHP_VERSION"
+    - composer install
+
+# Installer les dépendances
+install_dependencies:
+  stage: install
+  script:
+    - composer install
+
+# Générer la clé Laravel
+generate_key:
+  stage: build
+  script:
+    - php artisan key:generate
+
+# Définir les permissions des répertoires
+set_permissions:
+  stage: build
+  script:
+    - chmod -R 777 storage bootstrap/cache
+
+# Créer la base de données SQLite (si nécessaire)
+create_database:
+  stage: build
+  script:
+    - mkdir -p database
+    - touch database/database.sqlite
+
+# Configurer Node.js
+setup_nodejs:
+  image: "node:$NODE_VERSION"
+  stage: setup
+  script:
+    - npm install
+
+# Exécuter Docker Compose
+run_docker_compose:
+  stage: test
+  script:
+    - docker-compose -f docker-compose.yml up -d

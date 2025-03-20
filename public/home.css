@@ -1,0 +1,210 @@
+/* Style global */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #F4F4F9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal */
+.container {
+    padding: 3rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Titre principal */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #FF8BA7;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Sous-titres */
+h2, h3 {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Centrer les sous-titres */
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Paragraphes */
+p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-align: center; /* Centrer les paragraphes */
+    margin-bottom: 2rem;
+}
+
+/* Jumbotron (bannière d'introduction) */
+.jumbotron {
+    background-color: #FF8BA7;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.jumbotron h1 {
+    font-size: 3rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.jumbotron p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Liste des engagements */
+ul {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+ul li {
+    font-size: 1.2rem;
+    color: #444;
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    background-color: #FF8BA7;
+    color: white;
+    cursor: pointer;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+    background-color: #FF4B5C;
+}
+
+/* Boutons */
+.btn-success {
+    background-color: #C3E8BD;
+    border-color: #C3E8BD;
+    color: #594A4E;
+    border-radius: 25px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    animation: bounceIn 1s ease-out;
+}
+
+.btn-success:hover {
+    background-color: #A8D5A2;
+    border-color: #A8D5A2;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation pour le bouton */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-success:focus {
+    animation: pulse 1s infinite;
+}
+
+/* Animation pour l'apparition des éléments */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation de l'entrée du bouton */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Grilles des contenus */
+.row {
+    margin-top: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Graphiques */
+canvas {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Responsivité pour écrans plus petits */
+@media (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 2.5rem;
+    }
+
+    .jumbotron p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        margin-bottom: 1.5rem;
+    }
+}

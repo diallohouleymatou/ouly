@@ -1,0 +1,129 @@
+/* Style pour le bouton Ajouter au Panier */
+.panier-form {
+    margin: 1.5rem 0;
+    position: relative;
+    perspective: 1000px;
+}
+
+.panier-form button.btn-success {
+    background: linear-gradient(135deg, #ff9e9e, #ff6b6b);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px 12px 60px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    width: 100%;
+    max-width: 280px;
+    text-align: left;
+}
+
+.panier-form button.btn-success:before {
+    content: '🛒';
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    z-index: 2;
+}
+
+.panier-form button.btn-success:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: width 0.4s ease;
+    z-index: 1;
+}
+
+.panier-form button.btn-success:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(135deg, #ff8c8c, #ff5252);
+}
+
+.panier-form button.btn-success:hover:after {
+    width: 100%;
+}
+
+.panier-form button.btn-success:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Animation pour le bouton */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 107, 107, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+    }
+}
+
+.panier-form:hover button.btn-success {
+    animation: pulse 1.5s infinite;
+}
+
+/* Texte qui apparaît pendant le survol */
+.panier-form button.btn-success span {
+    position: relative;
+    z-index: 2;
+}
+
+.panier-form button.btn-success .hover-text {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.panier-form button.btn-success:hover .hover-text {
+    opacity: 1;
+    right: 20px;
+}
+
+/* Versions responsives */
+@media (max-width: 768px) {
+    .panier-form button.btn-success {
+        width: 100%;
+        max-width: none;
+        font-size: 0.9rem;
+        padding: 10px 20px 10px 50px;
+    }
+
+    .panier-form button.btn-success:before {
+        left: 15px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Version disabled */
+.panier-form button.btn-success:disabled {
+    background: linear-gradient(135deg, #d9d9d9, #b5b5b5);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.panier-form button.btn-success:disabled:hover {
+    transform: none;
+    animation: none;
+}
