@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ "diallo_houleymatou_burger" ]
+    branches: [ "main" ]
 
 jobs:
   laravel-tests:
